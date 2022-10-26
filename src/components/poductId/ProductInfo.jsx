@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import './styles/productInfo.css'
 
 const ProductInfo = ({product}) => {
 
@@ -32,8 +33,8 @@ const handlePlus = () =>{
                     <div className='counter_number'>{counter}</div>
                     <div className='counter_plus' onClick={handlePlus}>+</div>
                 </div>
-                <button className='product_info_btn'>Add to Cart <i className="product_info_icon fa-solid fa-cart-shopping"></i></button>
             </div>
+                <button className='product_info_btn'>Add to Cart <i className="product_info_icon fa-solid fa-cart-shopping"></i></button>
         </footer>
     </article>
   )

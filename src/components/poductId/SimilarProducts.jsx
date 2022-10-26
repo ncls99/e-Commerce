@@ -36,7 +36,6 @@ const SimilarProducts = ({ product }) => {
 
   }, [idCategory])
 
-console.log(similarProducts)
 
 
   return (

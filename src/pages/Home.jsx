@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CardProduct from '../components/home/CardProduct'
 import { getAllProducts } from '../store/slices/products.slice'
+import './styles/home.css'
 
 const Home = () => {
 
