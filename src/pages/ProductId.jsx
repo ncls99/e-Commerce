@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ProductInfo from '../components/poductId/ProductInfo'
 import SimilarProducts from '../components/poductId/SimilarProducts'
+import SliderImg from '../components/poductId/SliderImg'
+
 const ProductId = () => {
 
   const [product, setProduct] = useState()
@@ -24,7 +26,11 @@ const ProductId = () => {
 
  
   return (
-    <div>
+    <div className='productId_container'>
+      {
+        product && <SliderImg product={product}/>
+      }
+      
       <ProductInfo product={product} />
       <SimilarProducts product={product}/>
     </div>
