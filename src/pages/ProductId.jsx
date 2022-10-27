@@ -21,10 +21,6 @@ const ProductId = () => {
   }, [id])
   
 
-
-
-
- 
   return (
     <div className='productId_container'>
       {

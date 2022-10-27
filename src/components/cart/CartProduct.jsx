@@ -23,8 +23,8 @@ const handleDelete = () => {
     <article className='cart_p'>
         <h2>{product.title}</h2>
         <ul>
-            <li><span>Price:</span>{product.price}</li>
-            <li><span>Quantity</span>{product.productsInCart.quantity}</li>
+            <li><span>Price: </span>{product.price}</li>
+            <li><span>Quantity: </span>{product.productsInCart.quantity}</li>
         </ul>
         <button onClick={handleDelete} className='cart_p_btn'><i className="cart_p_icon fa-solid fa-trash-can"></i></button>
     </article>
