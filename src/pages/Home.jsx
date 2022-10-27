@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CardProduct from '../components/home/CardProduct'
+import FilterCategory from '../components/home/FilterCategory'
 import InputSearch from '../components/home/InputSearch'
 import { getAllProducts } from '../store/slices/products.slice'
 import './styles/home.css'
@@ -34,6 +35,7 @@ const Home = () => {
         inputText={inputText}
         setInputText={setInputText}
       />
+      <FilterCategory />
       <div className='home_container'>
         {
           filterByText?.map(product => (
