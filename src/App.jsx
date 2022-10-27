@@ -8,10 +8,11 @@ import ProductId from './pages/ProductId'
 import ProtectedRoutes from './pages/ProtectedRoutes'
 import Purchases from './pages/Purchases'
 import LoginScreen from './pages/LoginScreen'
+import Header from './components/shared/Header'
 
 function App() {
 
-//   const data = {
+{//   const data = {
 //     firstName: "Nico",
 //     lastName: "Montenegro",
 //     email: "nico@gmail.com",
@@ -27,11 +28,12 @@ function App() {
 //       .then(res => console.log(res.data))
 //       .catch(err => console.log(err))
 //   }, [])
-  
+}
 
 
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product/:id' element={<ProductId />} />

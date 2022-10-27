@@ -1,0 +1,94 @@
+.formBox {
+    display: flex;
+    height: 100vh;
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+  }
+  
+  .form {
+    background-color: #fff;
+    margin: auto;
+    width: 290px;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+    position: relative;
+    border: 1px solid #aaa8;
+  }
+
+  .formTitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+.formGroup {
+    position: relative;
+    --color: #5757577e;
+    margin-bottom: 30px;
+  }
+  
+  .formInput {
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid var(--color);
+  }
+  
+  .formInput:focus+.formLabel,
+  .formInput:not(:placeholder-shown)+.formLabel {
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #00ABB3;
+  }
+  
+  .formLabel {
+    color: var(--color);
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+  }
+  
+  .formSubmit {
+    width: 200px;
+    background-color: #00ABB3;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: transform 200ms ease;
+  }
+  
+  .formSubmit:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
+    
+  }
+  
+  .formLine {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #00ABB3;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+  }
+  
+  .formInput:focus~.formLine,
+  .formInput:not(:placeholder-shown)+.formLine {
+    transform: scale(1);
+  
+  }
