@@ -1,0 +1,30 @@
+.purchases_title {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.purchases_container {
+    margin-top: 30px;
+    height: 90vh;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.purchase_container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.purchase_detail_container {
+    border: 1px solid #ccc8;
+    width: 70%;
+    border-radius: 8px;
+    padding: 20px;
+
+}
+
+.product_purchased {}

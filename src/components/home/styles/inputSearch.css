@@ -1,0 +1,19 @@
+.formGroupHomeSearch {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formInputHomeSearch {
+    width: 70%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: 1px solid #aaa8;
+    outline: none;
+    
+  }
+
+ 

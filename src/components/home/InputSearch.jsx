@@ -1,13 +1,18 @@
 import React from 'react'
+import './styles/inputSearch.css'
 
-const InputSearch = ({setInputText, inputText}) => {
+const InputSearch = ({ setInputText, inputText }) => {
 
-const handleChange = (e) =>{
-setInputText(e.target.value)
-}
+  const handleChange = (e) => {
+    setInputText(e.target.value)
+  }
 
   return (
-    <input value={inputText} onChange={handleChange} type='text'/>
+
+    <div className='formGroupHomeSearch'>
+      <input value={inputText} onChange={handleChange} type="text" className='formInputHomeSearch' placeholder='What are you looking for?' 
+      />
+    </div>
   )
 }
 

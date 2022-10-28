@@ -3,6 +3,8 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { getAllProducts, getProductByCategory } from '../../store/slices/products.slice'
+import './styles/filterByCategory.css'
+
 
 const FilterCategory = () => {
 
@@ -26,13 +28,13 @@ const handleFetchCategory = id => {
 }
     
   return (
-    <article>
-        <h3>Category</h3>
-        <ul >
-            <li onClick={() => handleFetchCategory()}>All Products</li>
+    <article className='filter_category_container'>
+        <h3 className='filter_title' >Category</h3>
+        <ul className='filter_list'>
+            <li className='filter_item' onClick={() => handleFetchCategory()}>All Products</li>
             {
                 categories?.map(category => (
-                    <li onClick={() => handleFetchCategory(category.id)} 
+                    <li className='filter_item' onClick={() => handleFetchCategory(category.id)} 
                     key={category.id}>{category.name}</li>
                 ))
             }

@@ -35,15 +35,13 @@ const LoginScreen = () => {
 
 if(isLogged) {
 return (
-    <div>
-        <h2>User Logged.</h2>
-        <button onClick={handleLogout}>Logout</button>
+    <div className='formGroup'>
+        <h2 className='formTitle'>User Logged.</h2>
+        <button className='formSubmit' onClick={handleLogout}>Logout</button>
     </div>
 )
 
 }
-
-
     return (
         <div className='formBox'>
             <form className="form" onSubmit={handleSubmit(submit)} >

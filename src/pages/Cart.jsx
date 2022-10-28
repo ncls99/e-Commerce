@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import CartProduct from '../components/cart/CartProduct'
 import { getAllProductsCart, setCartGlobal } from '../store/slices/cart.slice'
 import getConfig from '../utils/getConfig'
+import '../components/cart/styles/cartProduct.css'
 
 const Cart = () => {
 
@@ -14,18 +15,18 @@ const Cart = () => {
   useEffect(() => {
     dispatch(getAllProductsCart())
   }, [])
-  
+
   console.log(cart)
 
   useEffect(() => {
-    if(cart) {
+    if (cart) {
       const result = cart.products.reduce((acc, cv) => {
-        return acc + Number(cv.price) * cv.productsInCart.quantity 
+        return acc + Number(cv.price) * cv.productsInCart.quantity
       }, 0)
       setTotal(result)
     }
   }, [cart])
-  
+
 
   const handlePurchase = () => {
     const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/purchases`
@@ -35,7 +36,7 @@ const Cart = () => {
       zipCode: 12345,
       city: "USA",
       references: "Some references"
-  }
+    }
     axios.post(URL, data, getConfig())
       .then(res => {
         console.log(res.data)
@@ -43,23 +44,25 @@ const Cart = () => {
       })
       .catch(err => console.log(err))
 
-        setTotal(0)
+    setTotal(0)
   }
 
   return (
     <div className='cart'>
       <div className='cart_container'>
-      {
-        cart?.products.map( product => (
-          <CartProduct 
-          key={product.id}
-          product={product}
-          />
-        ))
-      }
+        {
+          cart?.products.map(product => (
+            <CartProduct
+              key={product.id}
+              product={product}
+            />
+          ))
+        }
       </div>
-      <h2>Total: ${total}</h2>
-      <button onClick={handlePurchase}>Proceed to Checkout</button>
+      <div className='bot_container'>
+        <h2>Total: ${total}</h2>
+        <button className='buttonCheckOut' onClick={handlePurchase}>Proceed to Checkout</button>
+      </div>
     </div>
   )
 }
