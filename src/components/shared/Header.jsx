@@ -3,6 +3,11 @@ import { Link, NavLink } from 'react-router-dom'
 import './styles/header.css'
 
 const Header = () => {
+    const handleLogout = () => {
+        localStorage.removeItem('token')
+        setIsLogged(false)
+    }
+
     return (
         <header className='main_header'>
             <h1 >
@@ -11,7 +16,7 @@ const Header = () => {
             <nav className='header_nav'>
                 <ul className='header_list'>
                     <li className='header_item'>
-                        <NavLink className='header_link borders_left' to='/login'>
+                        <NavLink onClick={handleLogout} className='header_link borders_left' to='/login'>
                         <i class="fa-solid fa-right-to-bracket"></i>
                         </NavLink>
                     </li>

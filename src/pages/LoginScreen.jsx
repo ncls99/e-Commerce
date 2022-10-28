@@ -2,12 +2,14 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 import './styles/loginScreen.css'
 
 const LoginScreen = () => {
 
     const { handleSubmit, register, reset } = useForm()
     const [isLogged, setIsLogged] = useState(false)
+    const navigate = useNavigate()
 
     const submit = (data) => {
         const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/users/login`
@@ -34,7 +36,9 @@ const LoginScreen = () => {
     }
 
 if(isLogged) {
+    navigate('/')
 return (
+
     <div className='formGroup'>
         <h2 className='formTitle'>User Logged.</h2>
         <button className='formSubmit' onClick={handleLogout}>Logout</button>
